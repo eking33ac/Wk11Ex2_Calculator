@@ -31,28 +31,34 @@ if userChoice == 1:
     # set result variable to the result of the equasion
     result = round(num1 + num2, 2)
     # tell user the result of their addition
-    print(f"The result of addition is: {result}")
+    print(f"The result of addition is: {result:.2f}")
 # if user's choice is 2
 elif userChoice == 2:
     # set result variable to the result of the equasion
     result = round(num1 - num2, 2)
     # tell user the result of their subtraction
-    print(f"The result of subtraction is: {result}")
+    print(f"The result of subtraction is: {result:.2f}")
 elif userChoice == 3:
     # set result variable to the result of the equasion
     result = round(num1 * num2, 2)
     # tell user the result of their multiplication
-    print(f"The result of multiplication is: {result}")
+    print(f"The result of multiplication is: {result:.2f}")
 elif userChoice == 4:
     # set result variable to the result of the equasion
     result = round(num1 / num2, 2)
     # tell user the result of their division
-    print(f"The result of division is: {result}")
+    print(f"The result of division is: {result:.2f}")
 # if choice is not in range
 else:
     result = "Nothing"
     # tell user their choice was out of range
     print("Sorry, that choice is out of range. Have a lovely day!")
-    
-# present final result to user again
-print(f"Here is the result: {result}")
+
+# if the result is not a number
+if result == "Nothing":
+    # present final result to user again
+    print(f"Here is the result: {result}")
+# if the result is a number
+else:
+    # present formatted final result to user again
+    print(f"Here is the result: {result:.2f}")
